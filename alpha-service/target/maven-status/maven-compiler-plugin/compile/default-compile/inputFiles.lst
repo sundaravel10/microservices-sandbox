@@ -1,4 +1,6 @@
-E:\alpha\alpha\src\main\java\com\example\alpha\AlphaApplication.java
-E:\alpha\alpha\src\main\java\com\example\alpha\response\AlphaResponse.java
-E:\alpha\alpha\src\main\java\com\example\alpha\services\AlphaService.java
-E:\alpha\alpha\src\main\java\com\example\alpha\controllers\AlphaController.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\services\AlphaService.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\AlphaApplication.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\services\BetaServiceClient.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\controllers\AlphaController.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\responses\BetaResponse.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\responses\AlphaResponse.java
