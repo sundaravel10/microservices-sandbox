@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-class SecurityConfig {
+public class SecurityConfig {
 
     private final CognitoConfig cognitoConfig;
 
@@ -29,20 +29,21 @@ class SecurityConfig {
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
                                 .antMatchers("/api/beta/getStatus").permitAll()
-                                .anyRequest().authenticated())
+                                .anyRequest().authenticated()
+                )
                 .oauth2Login(oauth2Login ->
-                                oauth2Login
-                                        .loginPage("https://cog-sandbox.auth.ap-south-1.amazoncognito.com/login?client_id=" + cognitoConfig.getClientId())
-                                        .defaultSuccessUrl("/success")
-                                        .authorizationEndpoint(authorizationEndpoint ->
-                                                        authorizationEndpoint
-                                                                .baseUri(cognitoConfig.getAuthorizationUri())
-                                                                .authorizationRequestResolver(new CognitoAuthorizationRequestResolver(clientRegistrationRepository(),cognitoConfig.getClientId()))
-                                        )
-                                                        .userInfoEndpoint(userInfoEndpoint ->
-                                                        userInfoEndpoint.oidcUserService(oidcUserService()))
-                                        )
-                .cors();
+                        oauth2Login
+                                .clientRegistrationRepository(clientRegistrationRepository())
+                                .defaultSuccessUrl("/success")
+                                .authorizationEndpoint(authorizationEndpoint ->
+                                        authorizationEndpoint
+                                                .baseUri(cognitoConfig.getAuthorizationUri())
+                                                .authorizationRequestResolver(new CognitoAuthorizationRequestResolver(clientRegistrationRepository(), cognitoConfig.getClientId()))
+                                )
+                                .userInfoEndpoint(userInfoEndpoint ->
+                                        userInfoEndpoint.oidcUserService(oidcUserService())
+                                )
+                );
         return http.build();
     }
 
@@ -51,7 +52,7 @@ class SecurityConfig {
         ClientRegistration registration = ClientRegistration
                 .withRegistrationId("cognito")
                 .clientId(cognitoConfig.getClientId())
-                .redirectUri("http:/localhost:8080/login/oauth2/code/cognito")
+                .redirectUri("http://localhost:8080/login/oauth2/code/cognito")
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .scope("openid", "phone", "email")
                 .authorizationUri(cognitoConfig.getAuthorizationUri())
@@ -67,5 +68,4 @@ class SecurityConfig {
     public CustomOidcUserService oidcUserService() {
         return new CustomOidcUserService();
     }
-
 }

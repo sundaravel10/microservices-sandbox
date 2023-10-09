@@ -14,6 +14,7 @@ public class CognitoConfig {
     private String authorizationUri;
     private String tokenUri;
     private String jwkSetUri;
+    private String redirectionUri;
 
 }
 
