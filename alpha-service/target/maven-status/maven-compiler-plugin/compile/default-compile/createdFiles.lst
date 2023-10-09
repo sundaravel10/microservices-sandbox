@@ -1,4 +1,6 @@
 com\example\alpha\AlphaApplication.class
+com\example\alpha\responses\AlphaResponse.class
+com\example\alpha\responses\BetaResponse.class
+com\example\alpha\services\BetaServiceClient.class
 com\example\alpha\controllers\AlphaController.class
-com\example\alpha\response\AlphaResponse.class
 com\example\alpha\services\AlphaService.class
