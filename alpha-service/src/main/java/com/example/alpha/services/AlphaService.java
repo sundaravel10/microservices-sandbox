@@ -12,17 +12,17 @@ public class AlphaService {
     @Autowired
     private AlphaResponse alphaResponse;
 
-    @Autowired
-    private BetaServiceClient betaServiceClient;
+   /* @Autowired
+    private BetaServiceClient betaServiceClient;*/
 
     public AlphaResponse getGreetings(){
         alphaResponse.setMessage("Hello User! I am alpha!");
         return alphaResponse;
     }
 
-    public AlphaResponse checkBetaStatus() {
+  /*  public AlphaResponse checkBetaStatus() {
         BetaResponse betaResponse = betaServiceClient.getStatus();
         alphaResponse.setMessage(betaResponse.getMessage());
         return alphaResponse;
-    }
+    }*/
 }

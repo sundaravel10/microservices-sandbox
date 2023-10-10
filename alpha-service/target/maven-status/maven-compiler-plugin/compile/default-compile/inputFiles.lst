@@ -1,6 +1,9 @@
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\controllers\LoginCallBackController.java
 E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\services\AlphaService.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\config\CognitoConfig.java
 E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\AlphaApplication.java
 E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\services\BetaServiceClient.java
+E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\config\SecurityConfig.java
 E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\controllers\AlphaController.java
 E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\responses\BetaResponse.java
 E:\microservices-sandbox\alpha-service\src\main\java\com\example\alpha\responses\AlphaResponse.java

@@ -20,10 +20,10 @@ public class AlphaController {
         return ResponseEntity.ok().body(alphaService.getGreetings());
     }
 
-    @GetMapping("/check-beta")
+  /*  @GetMapping("/check-beta")
     public ResponseEntity<AlphaResponse> checkBetaStatus(){
         return ResponseEntity.ok(alphaService.checkBetaStatus());
     }
-
+*/
 
 }
