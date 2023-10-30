@@ -26,6 +26,9 @@ public class RequestMapper {
     }
 
     public PetEntity mapPetRequestToEntity(PetRequest petRequest, PersonEntity person){
-        return PetEntity.builder().name(petRequest.getName()).person(person).build();
+        PetEntity petEntity = new PetEntity();
+        petEntity.setName(petRequest.getName());
+        petEntity.setPerson(person);
+        return petEntity;
     }
 }

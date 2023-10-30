@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import javax.validation.constraints.NotBlank;
 
 @Data
-@Component
 @Builder
 public class PetData {
 

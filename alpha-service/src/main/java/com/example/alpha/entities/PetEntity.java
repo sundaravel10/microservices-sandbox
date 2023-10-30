@@ -8,16 +8,16 @@ import javax.validation.constraints.NotBlank;
 
 @Entity(name = "pet")
 @Data
-@Builder
 public class PetEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
     private String name;
 
     @ManyToOne
+    @JoinColumn(name = "owner_id")
     private PersonEntity person;
 }
