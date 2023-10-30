@@ -43,7 +43,7 @@ public class AlphaService {
     public PortfolioResponse getAllData(){
         List<PortfolioEntity> portfolioEntityList = portfolioRepository.findAll();
         ResponseMapper responseMapper = new ResponseMapper();
-        portfolioResponse.setPortfolioDataList(responseMapper.mapEntityToList(portfolioEntityList));
+        portfolioResponse.setPortfolioDataList(responseMapper.mapPortfolioEntityToList(portfolioEntityList));
         portfolioResponse.setMessage("Portfolio Details are as follows");
         return portfolioResponse;
     }
@@ -51,8 +51,8 @@ public class AlphaService {
     public PortfolioResponse putData(List<PortfolioData> portfolioDataList) {
         RequestMapper requestMapper = new RequestMapper();
         ResponseMapper responseMapper = new ResponseMapper();
-        List<PortfolioEntity> portfolioEntityList = portfolioRepository.saveAll(requestMapper.mapToEntity(portfolioDataList));
-        portfolioResponse.setPortfolioDataList(responseMapper.mapEntityToList(portfolioEntityList));
+        List<PortfolioEntity> portfolioEntityList = portfolioRepository.saveAll(requestMapper.mapPortfolioDataToEntity(portfolioDataList));
+        portfolioResponse.setPortfolioDataList(responseMapper.mapPortfolioEntityToList(portfolioEntityList));
         portfolioResponse.setMessage("Following Data are saved");
         return portfolioResponse;
     }
