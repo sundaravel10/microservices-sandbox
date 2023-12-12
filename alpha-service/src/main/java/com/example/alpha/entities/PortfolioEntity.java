@@ -1,10 +1,11 @@
 package com.example.alpha.entities;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
-import javax.persistence.*;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
+
 import java.time.ZonedDateTime;
 
 @Entity(name = "portfolio")

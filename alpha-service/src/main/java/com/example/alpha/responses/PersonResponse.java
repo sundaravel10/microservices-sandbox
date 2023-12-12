@@ -1,12 +1,11 @@
 package com.example.alpha.responses;
 
 import com.example.alpha.util.PersonData;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
 

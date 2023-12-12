@@ -2,10 +2,11 @@ package com.example.alpha.requests;
 
 
 import com.example.alpha.util.PortfolioData;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotNull;
+
 import java.util.List;
 
 @Data
