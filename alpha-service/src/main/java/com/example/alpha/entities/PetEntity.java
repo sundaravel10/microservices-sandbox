@@ -1,11 +1,9 @@
 package com.example.alpha.entities;
 
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-
 
 @Entity(name = "pet")
 @Data

@@ -6,6 +6,7 @@ import com.example.alpha.responses.PortfolioResponse;
 import com.example.alpha.services.AlphaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,13 +17,9 @@ public class AlphaController {
     AlphaService alphaService;
 
     @GetMapping("/hello")
+    @PreAuthorize("")
     public ResponseEntity<AlphaResponse> getGreetings(){
         return ResponseEntity.ok().body(alphaService.getGreetings());
-    }
-
-    @GetMapping("/check-beta")
-    public ResponseEntity<AlphaResponse> checkBetaStatus(){
-        return ResponseEntity.ok(alphaService.checkBetaStatus());
     }
 
     @GetMapping("/getall/portfolio/data")

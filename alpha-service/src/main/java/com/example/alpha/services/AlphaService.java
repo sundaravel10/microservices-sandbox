@@ -5,7 +5,6 @@ import com.example.alpha.entities.PortfolioEntity;
 import com.example.alpha.repository.PortfolioRepository;
 import com.example.alpha.requests.RequestMapper;
 import com.example.alpha.responses.AlphaResponse;
-import com.example.alpha.responses.BetaResponse;
 import com.example.alpha.responses.PortfolioResponse;
 import com.example.alpha.responses.ResponseMapper;
 import com.example.alpha.util.PortfolioData;
@@ -24,19 +23,10 @@ public class AlphaService {
     protected PortfolioResponse portfolioResponse;
 
     @Autowired
-    protected BetaServiceClient betaServiceClient;
-
-    @Autowired
     protected PortfolioRepository portfolioRepository;
 
     public AlphaResponse getGreetings(){
         alphaResponse.setMessage("Hello User! I am alpha!");
-        return alphaResponse;
-    }
-
-    public AlphaResponse checkBetaStatus() {
-        BetaResponse betaResponse = betaServiceClient.getStatus();
-        alphaResponse.setMessage(betaResponse.getMessage());
         return alphaResponse;
     }
 

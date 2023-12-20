@@ -1,10 +1,11 @@
 package com.example.alpha.requests;
 
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotBlank;
+
 
 
 @Data

@@ -1,10 +1,9 @@
 package com.example.alpha.util;
 
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
 import lombok.Data;
-
-import javax.validation.constraints.NotBlank;
 
 
 @Data
