@@ -18,8 +18,8 @@ public class OpenApiConfiguration {
 
     private Info apiInfo() {
         return new Info()
-                .title("Human cloning API")
-                .description("API for creating clone who will fight in the clones wars")
+                .title("Household API [Sandbox]")
+                .description("APIs for Sandbox purposes")
                 .version("2.0")
                 .contact(apiContact())
                 .license(apiLicence());
@@ -34,7 +34,7 @@ public class OpenApiConfiguration {
     private Contact apiContact() {
         return new Contact()
                 .name("Sundar")
-                .email("")
+                .email("sundaravel10@gmail.com")
                 .url("");
     }
 }
